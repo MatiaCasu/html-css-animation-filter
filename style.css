@@ -76,7 +76,7 @@
 }
 
 .ex-8-img{
-  transition: border-radius 1.5s, filter 1.5s;
+  transition: all 1.5s;
 }
 
 .ex-8-img:hover{
@@ -84,8 +84,10 @@
   filter: grayscale(50%) sepia(50%);
 }
 
-.ex-9-img{
-  transition: transform 2s, filter 2s, border-radius 2s;
+.ex-9-img {
+    margin: 50px 100px;
+    width: 400px;
+    transition: all 2s;
 }
 
 .ex-9-img:hover{
@@ -94,16 +96,39 @@
   border-radius: 20px;
 }
 
-.ex-9-img {
-    margin: 50px 100px;
-    width: 400px;
-}
 .ex-10-icon {
     font-size: 60px;
+    animation-name: rotate-infinite;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
+@keyframes rotate-infinite {
+  100%{
+  transform: rotate(-360deg);
+  }
+}
+
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover{
+    animation-name: rotate-300;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate-300 {
+  80%{
+    transform: rotate(300deg);
+  }
+
+  100%{
+    transform: rotate(0);
+  }
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
